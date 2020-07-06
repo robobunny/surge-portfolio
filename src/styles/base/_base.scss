@@ -1,0 +1,21 @@
+* {
+    transition: 150ms;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Fira Sans OT', 'Arial', sans-serif;
+    font-size: $s-size;
+}
+
+.error {
+    color: $error;
+    font-style: italic;
+}
+
+.is-active {
+    font-weight: bold;
+}
