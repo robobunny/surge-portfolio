@@ -22,7 +22,7 @@ const AppRouter = () => (
           component={Create}
         />
         <Route
-          path="/edit"
+          path="/edit/:id"
           component={Edit}
         />
         <Route

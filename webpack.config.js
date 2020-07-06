@@ -10,18 +10,20 @@ process.env.NODE_ENV = 'development';
 
 module.exports = {
     mode: 'development',
-    entry: resolveAppPath('src'),
+    entry: './src/index.js',
     output: {
-        filename: 'static/js/bundle.js'
+        filename: 'bundle.js',
+        publicPath: '/'
     },
+    devtool: 'inline-source-map',
     devServer: {
-        contentBase: resolveAppPath('public'),
+        // contentBase: resolveAppPath('public'),
         compress: true,
         hot: true,
         host,
         open: true,
         port: 3000,
-        publicPath: '/',
+        // publicPath: '/',
         historyApiFallback: true,
     },
     module: {
@@ -48,8 +50,8 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            inject: true,
-            template: resolveAppPath('public/index.html'),
+            // inject: true,
+            template: 'public/index.html',
         }),
     ],
 }
