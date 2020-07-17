@@ -1,38 +1,39 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Dashboard from "../components/Dashboard"
-import Edit from "../components/Edit"
-import Header from "../components/Header"
-import Help from "../components/Help"
-import NotFound from "../components/NotFound"
-import Create from "../components/Create"
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import Home from "../components/Home";
+import NavBar from '../components/NavBar';
+import NotFound from "../components/NotFound";
+import Projects from "../components/Projects";
 
 const AppRouter = () => (
   <BrowserRouter>
     <div>
       <Header />
-      <Switch>
-        <Route 
-          path="/"
-          component={Dashboard}
-          exact={true}
-        />
-        <Route
-          path="/create"
-          component={Create}
-        />
-        <Route
-          path="/edit/:id"
-          component={Edit}
-        />
-        <Route
-          path="/help"
-          component={Help}
-        />
-        <Route
-          component={NotFound}
-        />
-      </Switch>
+      <NavBar />
+      <div className="container">
+        <Switch>
+          <Route 
+            path="/"
+            component={Home}
+            exact={true}
+          />
+          <Route
+            path="/project"
+            component={Projects}
+          />
+          <Route
+            path="/contact"
+            component={Contact}
+          />
+          <Route
+            component={NotFound}
+          />
+        </Switch>
+        <Footer />
+      </div>
     </div>
   </BrowserRouter>
 );

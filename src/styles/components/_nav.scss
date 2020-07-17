@@ -1,0 +1,38 @@
+nav {
+  margin: 0;
+  background-color: $dkgreen0;
+  font-family: 'Source Code Pro', monospace;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  list-style-type: none;
+  margin: 0;
+  padding: $m-size 0;
+}
+
+nav a {
+  background-color: $dkgreen2;
+  color: $ltgreen;
+  display: inline-block;
+  font-size: $ml-size;
+  margin: 0 .8rem;
+  padding: .8rem $l-size;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: $dkgreen3;
+}
+
+nav .is-active {
+  color: $dkgreen0;
+  background-color: $green;
+}
+
+nav .is-active:hover {
+  color: $dkgreen0;
+  background-color: $green;
+}

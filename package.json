@@ -1,7 +1,7 @@
 {
-  "name": "bunny-money",
+  "name": "robobunny-portfolio",
   "version": "1.0.0",
-  "description": "Let a robotic rabbit help you control your finances",
+  "description": "William C. Duraney, fullstack javascript developer",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",

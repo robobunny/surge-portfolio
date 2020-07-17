@@ -1,0 +1,37 @@
+header {
+  background-color: $dkgreen1;
+  font-family: 'Raleway', sans-serif;
+  padding: $ml-size;
+}
+
+header h2 {
+  font-size: $xl-size;
+  margin: 0;
+}
+
+header p {
+  margin: 0;
+  font-size: $ml-size;
+  font-weight: 500;
+}
+
+header img {
+  background-color: $dkgreen3;
+  border: 1.2rem solid $green1;
+  object-fit: contain;
+  width: 128px;
+}
+
+header img:hover {
+  animation: App-logo-spin 500ms ease-in-out;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.header-info {
+  margin-left: $l-size;
+}

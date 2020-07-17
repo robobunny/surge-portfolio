@@ -1,15 +1,15 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 
 const Header = () => (
   <header>
-    <h1>Bunny Money</h1>
-    <nav>
-      <NavLink to="/" activeClassName="is-active" exact={true}>Dashboard</NavLink>
-      <NavLink to="/create" activeClassName="is-active">New Expense</NavLink>
-      <NavLink to="/edit" activeClassName="is-active">Edit Expense</NavLink>
-      <NavLink to="/help" activeClassName="is-active">Help</NavLink>
-    </nav>
+    <div className="header container">
+      <img src="../../public/bunny256.png" alt="robobunny logo" />
+      <div className="header-info">
+        <h2>William C. Duraney</h2>
+        <p>Fullstack Javascript Developer</p>
+        <p>@_robobunny</p>
+      </div>
+    </div>
   </header>
 )
 
