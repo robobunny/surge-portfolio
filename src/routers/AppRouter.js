@@ -4,15 +4,17 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Home from "../components/Home";
-import NavBar from '../components/NavBar';
+import NavBar from "../components/NavBar";
 import NotFound from "../components/NotFound";
 import Projects from "../components/Projects";
+import Weather from "../components/Weather";
 
 const AppRouter = () => (
   <BrowserRouter>
     <div>
       <Header />
       <NavBar />
+      <Weather />
       <div className="container">
         <Switch>
           <Route 

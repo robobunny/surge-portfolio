@@ -1,37 +1,71 @@
 header {
-  background-color: $dkgreen1;
-  font-family: 'Raleway', sans-serif;
-  padding: $ml-size;
+  background-color: $grey-100;
+  font-family: $heading-font;
+  padding: $font-md;
 }
 
 header h2 {
-  font-size: $xl-size;
-  margin: 0;
+  font-size: $font-xl;
+  font-weight: $font-semibold;
+  margin: .2rem 0 0 0;
+  text-align: center;
 }
 
 header p {
   margin: 0;
-  font-size: $ml-size;
-  font-weight: 500;
+  font-size: $font-xs;
+  font-weight: $font-normal;
+  text-align: center;
 }
 
 header img {
-  background-color: $dkgreen3;
-  border: 1.2rem solid $green1;
-  object-fit: contain;
+  background-color: $bunny-200;
+  border: .6rem solid $bunny-600;
+  object-fit: scale-down;
   width: 128px;
 }
 
-header img:hover {
+header a {
   animation: App-logo-spin 500ms ease-in-out;
 }
 
 .header {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 .header-info {
-  margin-left: $l-size;
+  flex-grow: 1;
+  margin: 1.2rem 0;
+}
+
+@media (min-width: 600px) {
+  header img{
+    border-width: 1.2rem;
+    width: 128px;
+  }
+
+  header img:hover {
+    animation: App-logo-spin 500ms ease-in-out;
+  }
+
+  header h2 {
+    font-size: $font-4xl;
+  }
+
+  header p {
+    font-size: $font-lg;
+  }
+}
+
+@media (min-width: 760px) {
+  header {
+    h2, p {
+      text-align: left;
+    }
+  }
+  .header-info {
+    margin-left: 1.6rem
+  }
 }

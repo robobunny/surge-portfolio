@@ -9,11 +9,11 @@ const Projects = () => (
       <h1>Projects</h1>
       <p>This is the Projects page</p>
       <ProjectNav />
-    </div>
-    <Route
+      <Route
       path="/project/:id"
       component={Project}
-    />
+      />
+    </div>
   </BrowserRouter>
 );
 

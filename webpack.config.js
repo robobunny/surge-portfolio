@@ -17,13 +17,11 @@ module.exports = {
     },
     devtool: 'inline-source-map',
     devServer: {
-        // contentBase: resolveAppPath('public'),
         compress: true,
         hot: true,
         host,
         open: true,
         port: 3000,
-        // publicPath: '/',
         historyApiFallback: true,
     },
     module: {
@@ -38,7 +36,8 @@ module.exports = {
                         require.resolve('babel-preset-react-app'),
                     ]
                 }
-            }, {
+            }, 
+            {
                 test: /\.s?css$/,
                 use: [
                     "style-loader", 

@@ -1,38 +1,44 @@
 nav {
   margin: 0;
-  background-color: $dkgreen0;
-  font-family: 'Source Code Pro', monospace;
+  background-color: $dkgreen-900;
+  font-family: $mono-font;
 }
 
 nav ul {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
   list-style-type: none;
   margin: 0;
-  padding: $m-size 0;
+  padding: $font-sm 0;
 }
 
 nav a {
-  background-color: $dkgreen2;
-  color: $ltgreen;
+  background-color: $dkgreen-700;
+  color: $bunny-100;
   display: inline-block;
-  font-size: $ml-size;
-  margin: 0 .8rem;
-  padding: .8rem $l-size;
+  font-size: $font-sm;
+  margin: .8rem .8rem;
+  padding: .8rem $font-xl;
   text-decoration: none;
 }
 
 nav a:hover {
-  background-color: $dkgreen3;
+  background-color: $dkgreen-600;
 }
 
 nav .is-active {
-  color: $dkgreen0;
-  background-color: $green;
+  color: $dkgreen-900;
+  background-color: $bunny-500;
 }
 
 nav .is-active:hover {
-  color: $dkgreen0;
-  background-color: $green;
+  color: $dkgreen-900;
+  background-color: $bunny-500;
+}
+
+@media (min-width: 600px) {
+  nav ul {
+    flex-direction: row;
+  }
 }

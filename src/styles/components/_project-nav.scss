@@ -1,13 +1,13 @@
 .project-nav {
-  background-color: $dkgreen1;
+  background-color: white;
 }
 
 .project-nav-link {
-  background-color: $dkgreen0;
-  font-size: $s-size;
+  background-color: $dkgreen-900;
+  font-size: $font-md;
 }
 
 .project-nav-link.is-active {
-  background-color: $green;
-  color: $dkgreen0;
+  background-color: $bunny-500;
+  color: $dkgreen-900;
 }
