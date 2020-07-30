@@ -1,0 +1,25 @@
+.report {
+  font-size: $font-xs;
+}
+
+.temp {
+  font-size: $font-xl;
+  font-weight: bold;
+}
+
+.weather {
+  font-size: $font-lg;
+  background-color: $dkgreen-800;
+  color: $bunny-500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 1.2rem 1.2rem;
+}
+
+.wi {
+  color: $bunny-500;
+  font-size: $font-2xl;
+  margin: 1.2rem auto;
+}

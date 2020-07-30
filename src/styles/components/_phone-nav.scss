@@ -1,0 +1,12 @@
+div.phone-nav {
+  width: 100%;
+}
+
+ul.phone-nav {
+  display: flex;
+  flex-direction: column;
+  font-family: $mono-font;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

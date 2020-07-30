@@ -1,19 +1,18 @@
-nav {
-  margin: 0;
-  background-color: $dkgreen-900;
-  font-family: $mono-font;
+div.nav {
+  margin: auto 0;
 }
 
-nav ul {
+ul.nav {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  font-family: $mono-font;
   list-style-type: none;
   margin: 0;
-  padding: $font-sm 0;
+  padding: 0;
 }
 
-nav a {
+a.nav {
   background-color: $dkgreen-700;
   color: $bunny-100;
   display: inline-block;
@@ -23,22 +22,23 @@ nav a {
   text-decoration: none;
 }
 
-nav a:hover {
+a.nav:hover {
   background-color: $dkgreen-600;
 }
 
-nav .is-active {
+.nav.is-active {
   color: $dkgreen-900;
   background-color: $bunny-500;
+  font-weight: bold;
 }
 
-nav .is-active:hover {
+.nav.is-active:hover {
   color: $dkgreen-900;
   background-color: $bunny-500;
 }
 
 @media (min-width: 600px) {
-  nav ul {
+  ul.nav {
     flex-direction: row;
   }
 }

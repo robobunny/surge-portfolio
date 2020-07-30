@@ -6,7 +6,7 @@ header {
 
 header h2 {
   font-size: $font-xl;
-  font-weight: $font-semibold;
+  font-weight: bold;
   margin: .2rem 0 0 0;
   text-align: center;
 }
@@ -14,7 +14,7 @@ header h2 {
 header p {
   margin: 0;
   font-size: $font-xs;
-  font-weight: $font-normal;
+  font-weight: normal;
   text-align: center;
 }
 
@@ -23,10 +23,6 @@ header img {
   border: .6rem solid $bunny-600;
   object-fit: scale-down;
   width: 128px;
-}
-
-header a {
-  animation: App-logo-spin 500ms ease-in-out;
 }
 
 .header {

@@ -1,7 +1,4 @@
-import React from 'react';
-
-
-
+const request = require('request');
 const weatherApiKey = 'e084c48223bf78ff04bf355894d6253c';
 const geocodeApiKey = 'I73WjZUtrHacvmxG60flVrzeqsEmHULZ';
 
@@ -22,13 +19,9 @@ const getWeather = (latLngObj) => {
     if (error) {
       console.log(error);
     } else {
-      console.log({
-        "temp": body.main.temp,
-        "icon": body.weather[0].id,
-        "weather": body.weather[0].description
-      })
+      console.log(`It's ${body.main.temp}° out there!`);
     }
   });
-}
+};
 
-geocode('Westerville?& OH',getWeather);
+export default geocode;

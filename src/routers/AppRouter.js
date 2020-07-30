@@ -1,26 +1,27 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import About from "../components/About";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Home from "../components/Home";
-import NavBar from "../components/NavBar";
-import NotFound from "../components/NotFound";
+// import NotFound from "../components/NotFound";
 import Projects from "../components/Projects";
-import Weather from "../components/Weather";
 
 const AppRouter = () => (
   <BrowserRouter>
     <div>
       <Header />
-      <NavBar />
-      <Weather />
       <div className="container">
         <Switch>
           <Route 
             path="/"
             component={Home}
             exact={true}
+          />
+          <Route
+            path='/bio'
+            component={About}
           />
           <Route
             path="/project"
@@ -30,12 +31,10 @@ const AppRouter = () => (
             path="/contact"
             component={Contact}
           />
-          <Route
-            component={NotFound}
-          />
+          <Redirect to="/" />
         </Switch>
-        <Footer />
       </div>
+      <Footer />
     </div>
   </BrowserRouter>
 );
