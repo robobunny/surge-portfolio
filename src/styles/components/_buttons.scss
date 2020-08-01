@@ -1,0 +1,43 @@
+button {
+  cursor: pointer;
+  background-color: $dkgreen-700;
+  color: $bunny-100;
+  display: inline-block;
+  font-size: $font-sm;
+  margin: .8rem .8rem;
+  padding: .8rem $font-xl;
+  text-decoration: none;
+  border: none;
+}
+
+button:hover {
+    background-color: rgba($color: #ffffff, $alpha: 0.1)
+}
+
+button:active {
+  background-color: $bunny-800;
+}
+
+.cta-button {
+  background-color: $bunny-500;
+  box-shadow: .4rem .4rem .4rem $grey-500;
+  border-color: $bunny-500;
+  color: $dkgreen-700;
+  margin: 2.4rem auto;
+  padding: .8rem .6rem;
+  max-height: fit-content;
+}
+
+a.center {
+    text-decoration: none;
+    margin: 0 auto;
+}
+
+.cta-button:hover {
+  background-color: $bunny-700;
+  border-color: $bunny-700;
+}
+
+.cta-button:active {
+  background-color:$bunny-900;
+}

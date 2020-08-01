@@ -1,30 +1,27 @@
 const path = require('path');
 const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const appDirectory = fs.realpathSync(process.cwd());
 const resolveAppPath = relativePath => path.resolve(appDirectory, relativePath);
-const host = process.env.HOST || 'localhost';
+process.env.NODE_ENV = 'production';
 
-process.env.NODE_ENV = 'development';
-
-module.exports = {
-    mode: 'development',
+module.exports = { 
+    mode: 'production',
     entry: './src/index.js',
     output: {
         filename: 'bundle.js',
         publicPath: '/'
     },
-    devtool: 'inline-source-map',
-    devServer: {
-        contentBase: path.join(__dirname, 'dist'),
-        compress: true,
-        hot: true,
-        host,
-        open: true,
-        port: 8080,
-        historyApiFallback: true,
-    },
+    devtool: 'source-map',
+    plugins: [
+        new MiniCssExtractPlugin(),
+        new HtmlWebpackPlugin({
+            // inject: true,
+            template: 'public/index.html',
+        })
+    ],
     module: {
         rules: [
             {
@@ -41,21 +38,15 @@ module.exports = {
             {
                 test: /\.s?css$/,
                 use: [
-                    "style-loader", 
+                    MiniCssExtractPlugin.loader,
                     "css-loader",
-                    "sass-loader"
-                ]
+                    "sass-loader",
+                ],
             },
             {
                 test: /\.(eot|svg|ttf|woff|woff2)/,
                 loader: "url-loader"
-            }
-        ]
+            },
+        ],
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            // inject: true,
-            template: 'public/index.html',
-        })
-    ],
 }

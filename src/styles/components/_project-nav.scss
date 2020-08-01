@@ -1,0 +1,14 @@
+.project-nav {
+  background-color: white;
+  overflow: auto;
+}
+
+.project-nav-link {
+  background-color: $dkgreen-900;
+  font-size: $font-md;
+}
+
+.project-nav-link.is-active {
+  background-color: $bunny-500;
+  color: $dkgreen-900;
+}
