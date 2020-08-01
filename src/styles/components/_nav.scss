@@ -24,6 +24,8 @@ a.nav {
 
 a.nav:hover {
   background-color: $dkgreen-600;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 2px $grey-700;
 }
 
 .nav.is-active {
