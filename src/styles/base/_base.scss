@@ -2,5 +2,15 @@ html {
     box-sizing: border-box
 }
 
+.screenshot {
+    max-width: 400px;
+    max-height: 300px;
+}
 
+@media (min-width: 1024px) {
+    .screenshot {
+        max-width: 600px;
+        max-height: 400px;
+    }
+}
 

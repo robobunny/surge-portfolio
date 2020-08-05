@@ -1,10 +1,19 @@
 import React from 'react';
+import magic8bunnyPng from '../img/magic-8-bunny.png';
 
 const Magic8Bunny = () => (
   <div>
     <h1>Magic 8 Bunny</h1>
     <div className="blog-post">
-      <div><a href="https://magic-8-bunny.surge.sh">Try it out!</a></div>
+      <div>
+        <a href="https://magic-8-bunny.surge.sh">
+          <p style={{ textAlign: "center", margin: "0" }}>Check out the app!</p>
+          <img
+            src={magic8bunnyPng}
+            alt="Screenshot of the Magic 8 Bunny app"
+            className="screenshot" />
+        </a>
+      </div>
       <div>
         <p>This is the first app I made using React. It's a simple "Magic-8-Ball" style app that lets you fill in custom responses, ask a question, and get a randomized answer. It's pretty useless but it shows off a couple skills I've learned!</p>
         <h2>What I learned</h2>
