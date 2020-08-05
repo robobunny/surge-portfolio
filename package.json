@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "devserver": "webpack-dev-server --watch",
-    "build:prod": "webpack -p --config webpack.prod.js"
+    "build:prod": "webpack -p --config webpack.prod.js",
+    "deploy": "npm run build:prod && cd dist && mv -f index.html 200.html && sudo surge . robobunny.surge.sh"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +21,7 @@
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.6.0",
     "express": "^4.17.1",
+    "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
