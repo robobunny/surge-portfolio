@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
+import weatherAppPng from '../img/weather-app.png';
 
 function Weather () { 
-  const [formSubmitted, setFormSubmitted] = useState(false);
-
   const handleSumbit = (e) => {
     e.preventDefault();
     console.log('Form submitted!');
@@ -13,23 +12,16 @@ function Weather () {
   return (
   <div>
     <h1>Weather App</h1>
-    <p>This app is still under construction! The mock-up below is not functional yet</p>
-    <p>This is a weather app that I'm building using an Express.js backend which fetches data from the Open Weather API and renders it using React</p>
-    <p>More details to come...</p>
-    <article className="blog-post">
-      <div className="weather">
-        <i className="wi wi-owm-800"></i>
-        <p className="temp">87° | 65°</p>
-        <p className="report">It's sunny!</p>
-        <form onSubmit={handleSumbit}>
-          <input 
-            type="text"
-            name="location"
-            placeholder="Enter a Location..." />
-        </form>
-        {formSubmitted && <p className="report">Form submitted!</p>}
-      </div>
-    </article>
+    <div className="blog-post">
+      <a href="https://robobunny-weather-app.herokuapp.com">
+        <p style={{ textAlign: "center", margin: "0" }}>Check out the app!</p>
+        <img src={weatherAppPng} alt="A weather report for Timbuktu" className="screenshot"/>
+      </a>
+      <p>This is a weather app that I built using an Express.js backend which fetches data from the Open Weather Map API and renders it using a small React.</p>
+      <p>The hardest part in my first full-stack app was getting the back end to play nice with the front end. By using realtive links and taking advantage of Heroku's <code>process.env.PORT</code> variable, pointing the client to the correct route for the API was a piece of cake. Then the hardest part was googling how to tell the client where to look for the API while using the development environment on my machine. A simple addition of a <code>"proxy"</code> option in the client's package.json was all it took.</p>
+      <p>This project taught me a lot about building an API and how clients and servers communicate. I can't wait to get into something a bit more advanced!</p>
+      <a href="https://robobunny-weather-app.herokuapp.com">Check out the app!</a>
+    </div>
   </div>
   );
 }

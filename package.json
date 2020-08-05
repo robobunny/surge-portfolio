@@ -5,10 +5,7 @@
   "main": "index.js",
   "scripts": {
     "devserver": "webpack-dev-server --watch",
-    "build:prod": "webpack -p --config webpack.prod.js",
-    "heroku-postbuild": "npm run build:prod",
-    "start": "node server/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:prod": "webpack -p --config webpack.prod.js"
   },
   "author": "",
   "license": "ISC",

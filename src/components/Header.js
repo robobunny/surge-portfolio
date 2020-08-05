@@ -2,14 +2,14 @@ import React from "react";
 import Media from "react-media";
 import BigNav from "./NavBar"
 import PhoneNav from "./PhoneNav";
-import Weather from "./Weather";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import bunnyLogo from '../img/bunny256.png';
 
 const Header = () => (
   <header>
     <div className="header">
       <Link to="/">
-        <img src="bunny256.png" alt="robobunny logo" />
+        <img src={bunnyLogo} alt="robobunny logo" />
       </Link>
       <div className="header-info">
         <h2>William C. Duraney</h2>
